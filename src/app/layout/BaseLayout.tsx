@@ -1,12 +1,14 @@
 import { Outlet } from 'react-router-dom';
 import styles from './BaseLayout.module.scss';
+import { Header } from 'widgets/Header/Header';
+import { Footer } from 'widgets/Footer/Footer';
 
 const BaseLayout = () => {
   return (
     <div className={styles.layout}>
-      <h1>jost</h1>
-      <span>BaseLayout</span>
+      <Header />
       <Outlet />
+      <Footer />
     </div>
   );
 };

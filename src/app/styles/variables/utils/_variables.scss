@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'sass:math';
 
 :root {
   --background: #ffffff;
@@ -26,7 +26,7 @@
   --chart-4: #e8c468;
   --chart-5: #f4a361;
 
-  -max-desktop-width: 2800px;
+  --max-desktop-width: 2800px;
   --desktop-hd: 1920px;
   --desktop-bootstrap: 1700px;
   --desktop-max-width: 1440px;
@@ -42,8 +42,8 @@
   --mobile-xs-width: 576px;
 
   /* FONT */
-  --font-family-sans: "Open Sans", sans-serif;
-  --font-family-jost: "Jost", sans-serif;
+  --font-family-sans: 'Open Sans', sans-serif;
+  --font-family-jost: 'Jost', sans-serif;
 
   /* FONT WEIGHT */
   --regular: 400;
@@ -53,7 +53,6 @@
   --extra-bold: 800;
   --black: 900;
 }
-
 
 // $maxDesktopWidth: 2800px;
 // $desktop-hd: 1920px;
