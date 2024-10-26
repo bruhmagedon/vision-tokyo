@@ -1,0 +1,96 @@
+@use "sass:math";
+
+:root {
+  --background: #ffffff;
+  --foreground: #08080a;
+  --card: #ffffff;
+  --card-foreground: #08080a;
+  --popover: #ffffff;
+  --popover-foreground: #08080a;
+  --primary: #16a349;
+  --primary-foreground: #fef1f2;
+  --secondary: #f4f4f5;
+  --secondary-foreground: #17171b;
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  --accent: #f4f4f5;
+  --accent-foreground: #17171b;
+  --destructive: #ee4444;
+  --destructive-foreground: #f9f9f9;
+  --border: #e3e3e7;
+  --input: #e3e3e7;
+  --ring: #16a349;
+  --chart-1: #e76e4f;
+  --chart-2: #299d8f;
+  --chart-3: #264753;
+  --chart-4: #e8c468;
+  --chart-5: #f4a361;
+
+  -max-desktop-width: 2800px;
+  --desktop-hd: 1920px;
+  --desktop-bootstrap: 1700px;
+  --desktop-max-width: 1440px;
+  --desktop-max-width-sec: 1400px;
+  --desktop-small-width: 1200px;
+  --small-tablet-max-width: 992px;
+  --tablet-max-width: 770px;
+  --mobile-max-width: 500px;
+  --mobile-max-width-small: 426px;
+  --mobile-max-width-supersmall: 390px;
+  --img-mobile-max-width: 580px;
+  --new-width: 630px;
+  --mobile-xs-width: 576px;
+
+  /* FONT */
+  --font-family-sans: "Open Sans", sans-serif;
+  --font-family-jost: "Jost", sans-serif;
+
+  /* FONT WEIGHT */
+  --regular: 400;
+  --normal: 500;
+  --semibold: 600;
+  --bold: 700;
+  --extra-bold: 800;
+  --black: 900;
+}
+
+
+// $maxDesktopWidth: 2800px;
+// $desktop-hd: 1920px;
+// $desktop-bootstrap: 1700px;
+// $desktop-max-width: 1440px;
+// $desktop-max-width-sec: 1400px;
+// $desktop-small-width: 1200px;
+// $small-tablet-max-width: 992px;
+// $tablet-max-width: 770px;
+// $mobile-max-width: 500px;
+// $mobile-max-width-small: 426px;
+// $mobile-max-width-superSmall: 390px;
+// $img-mobile-max-width: 580px;
+// $newWidth: 630px;
+// $mobile-xs-width: 576px;
+
+// /* FONT */
+// $font-family: "PingFang SC", sans-serif;
+
+// /* FONT WEIGHT */
+// $regular: 400;
+// $normal: 500;
+// $semibold: 600;
+// $bold: 700;
+// $extraBold: 800;
+// $black: 900;
+
+$baseFontSize: 16px;
+
+@function rem($pixels, $context: $baseFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return math.div($pixels, $context) * 1rem;
+}
