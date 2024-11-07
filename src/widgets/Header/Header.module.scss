@@ -1,0 +1,56 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: rem(20);
+  height: rem(50);
+  align-items: center;
+}
+.nav {
+  &_container {
+    display: flex;
+    column-gap: rem(48);
+    a {
+      font-weight: 700;
+      font-size: rem(20);
+      line-height: 130%;
+      text-transform: capitalize;
+      color: #f8f8ff;
+      transition: color 0.3s ease;
+      &:hover {
+        color: var(--primary);
+      }
+    }
+  }
+}
+.user {
+  &_notification {
+    border: rem(1) solid var(--secondary);
+    border-radius: rem(12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(50);
+    height: rem(50);
+    svg {
+      width: rem(25);
+      height: rem(25);
+    }
+  }
+  &_container {
+    display: flex;
+    gap: rem(20);
+
+    svg {
+      width: rem(24);
+      height: rem(24);
+    }
+  }
+  &_avatar {
+    border-radius: rem(12);
+    width: rem(50);
+    height: rem(50);
+    img {
+      border-radius: rem(12);
+    }
+  }
+}

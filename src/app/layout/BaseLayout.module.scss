@@ -1,9 +1,10 @@
 .layout {
-    background-color: hsl(var(--primary));
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    // font-family: var(--font-family-jost);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 rem(75);
+}
+
+.outlet {
+  flex: 1 1 0%;
 }

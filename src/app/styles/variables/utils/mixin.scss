@@ -38,12 +38,7 @@
   align-items: $align;
 }
 
-@mixin scrollBar(
-  $color-track,
-  $color-thumb,
-  $width: rem(10),
-  $height: rem(10)
-) {
+@mixin scrollBar($color-track, $color-thumb, $width: rem(10), $height: rem(10)) {
   // firefox
   scrollbar-width: thin; /* "auto" или "thin"  */
   scrollbar-color: $color-track $color-thumb;
@@ -79,19 +74,9 @@
   }
 }
 
-@mixin isLoading(
-  $duration: 0s,
-  $bgc: #dedede,
-  $gradientFirst: #f1f1f1,
-  $gradientSecond: #d5d5d5
-) {
+@mixin isLoading($duration: 0s, $bgc: #dedede, $gradientFirst: #f1f1f1, $gradientSecond: #d5d5d5) {
   background: $bgc;
-  background: linear-gradient(
-    110deg,
-    $gradientSecond 8%,
-    $gradientFirst 18%,
-    $gradientSecond 33%
-  );
+  background: linear-gradient(110deg, $gradientSecond 8%, $gradientFirst 18%, $gradientSecond 33%);
   background-size: 200% 100%;
   animation: 1.5s shine $duration linear infinite;
 }

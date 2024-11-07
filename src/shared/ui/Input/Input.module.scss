@@ -1,0 +1,10 @@
+.input_container {
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+  background-color: var(--secondary);
+  border-radius: rem(12);
+  padding-left: rem(16);
+  padding-right: rem(16);
+  height: rem(50);
+}

@@ -5,6 +5,15 @@
 
 body {
   font-family: var(--font-family-sans);
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+html {
+  // font-size: var(--max-desktop-width);
+  @include mediaMin($desktop-max-width) {
+    font-size: calc(16 / (1440 / 100) * 1vw);
+  }
 }
 
 .app {
