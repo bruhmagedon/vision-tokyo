@@ -81,6 +81,9 @@
       ],
       "ProfilePage/*": [
         "src/pages/ProfilePage/*"
+      ],
+      "@entities/*": [
+        "src/entities/*"
       ]
     },
     // esModuleInterop позволяет работать с пакетами, которые используют

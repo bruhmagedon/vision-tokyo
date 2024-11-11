@@ -1,9 +1,9 @@
 .header {
   display: flex;
   justify-content: space-between;
-  margin-top: rem(20);
-  height: rem(50);
   align-items: center;
+  box-shadow: 0 rem(4) rem(4) 0 rgba(0, 0, 0, 0.25);
+  padding: rem(15) rem(50);
 }
 .nav {
   &_container {

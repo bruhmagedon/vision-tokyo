@@ -3,19 +3,14 @@ export interface MoviesApiResponse {
 }
 
 export interface MoviePosterResponse {
-  docs: MoviePoster[];
+  total: number;
+  totalPages: number;
+  items: PreviewImage[];
 }
 
-export interface MoviePoster {
-  height?: number;
-  id?: string;
-  movieId: number;
+interface PreviewImage {
+  imageUrl?: string;
   previewUrl?: string;
-  type?: string;
-  updatedAt: string;
-  createdAt: string;
-  url?: string;
-  width?: number;
 }
 
 export interface Movie {

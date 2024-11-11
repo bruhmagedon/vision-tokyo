@@ -1,0 +1,30 @@
+.badge {
+  font-weight: 600;
+  font-size: rem(14);
+  line-height: 150%;
+}
+
+.bright {
+  border-radius: rem(8);
+  color: white;
+  border-color: #fff;
+}
+
+.pale {
+  border-radius: rem(4);
+  color: #9ea2a8;
+  border-color: #9ea2a8;
+}
+
+.border {
+  border-width: rem(1);
+  border-style: solid;
+}
+
+.size_m {
+  padding: rem(1) rem(5);
+}
+
+.size_l {
+  padding: rem(5) rem(9);
+}

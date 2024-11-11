@@ -10,7 +10,7 @@ body {
 }
 
 html {
-  // font-size: var(--max-desktop-width);
+  font-size: clamp(0.688rem, 0.464rem + 0.595vw, 1rem);
   @include mediaMin($desktop-max-width) {
     font-size: calc(16 / (1440 / 100) * 1vw);
   }

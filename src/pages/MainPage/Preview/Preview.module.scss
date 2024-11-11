@@ -1,4 +1,16 @@
 .preview {
   display: flex;
   column-gap: rem(30);
+  margin-top: rem(60);
+}
+.main_poster {
+  width: 60%;
+  position: relative;
+
+  &__img {
+    width: 100%;
+    aspect-ratio: 2/1;
+    z-index: -1;
+    border-radius: rem(12);
+  }
 }

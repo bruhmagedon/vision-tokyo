@@ -1,0 +1,16 @@
+.text {
+  font-weight: 600;
+  font-size: rem(14);
+  line-height: 150%;
+  color: #f8f8ff;
+  &_group {
+    display: flex;
+  }
+  &_title {
+    font-family: var(--font-family-jost);
+    font-weight: 400;
+    font-size: rem(14);
+    line-height: 150%;
+    color: #9ea2a8;
+  }
+}

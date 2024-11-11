@@ -1,0 +1,33 @@
+.movie_description {
+  &__container {
+    position: absolute;
+    bottom: rem(16);
+    left: rem(16);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.3);
+    row-gap: rem(8);
+    border-radius: rem(16);
+    padding: rem(16);
+    button {
+      margin-top: rem(16);
+    }
+  }
+
+  &__main {
+    &_title {
+      font-family: var(--font-family-jost);
+      font-weight: 700;
+      font-size: rem(40);
+      line-height: 110%;
+      color: #f8f8ff;
+    }
+  }
+  &__list {
+    display: flex;
+    list-style: none;
+    column-gap: rem(12);
+  }
+}

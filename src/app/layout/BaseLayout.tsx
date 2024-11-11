@@ -5,13 +5,15 @@ import { Footer } from 'widgets/Footer/Footer';
 
 const BaseLayout = () => {
   return (
-    <div className={styles.layout}>
+    <>
       <Header />
-      <div className={styles.outlet}>
-        <Outlet />
+      <div className={styles.layout}>
+        <div className={styles.outlet}>
+          <Outlet />
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 

@@ -1,0 +1,13 @@
+.button {
+  cursor: pointer;
+  background-color: var(--primary);
+  border-radius: rem(15);
+  padding: rem(12) rem(24);
+  font-size: rem(21);
+  line-height: 130%;
+  font-weight: 700;
+  color: #1b1b1b;
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+}

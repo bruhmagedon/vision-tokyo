@@ -9,6 +9,7 @@ interface HeaderProps {
   className?: string;
 }
 
+// TODO* пофиксить размер хедера (чтобы был поменьбше)
 export const Header = ({ className }: HeaderProps) => {
   return (
     <header className={classNames(styles.header, {}, [className])}>

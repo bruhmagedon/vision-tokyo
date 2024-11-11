@@ -10,8 +10,8 @@ interface TextGroupProps {
 export const TextGroup = ({ className, title, textList }: TextGroupProps) => {
   return (
     <div className={classNames(styles.text_group, {}, [className])}>
-      <span className={styles.text_title}>{title}</span>
-      <p className={styles.text_}>{textList}</p>
+      <span className={styles.text_title}>{title}:&nbsp;</span>
+      <p className={styles.text}>{textList}</p>
     </div>
   );
 };
