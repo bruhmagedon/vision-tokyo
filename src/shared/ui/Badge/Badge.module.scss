@@ -1,7 +1,12 @@
 .badge {
+  background-color: rgba(0, 0, 0, 0.4);
   font-weight: 600;
   font-size: rem(14);
   line-height: 150%;
+}
+
+.badge_child::first-letter {
+  text-transform: uppercase;
 }
 
 .bright {

@@ -4,6 +4,7 @@ import { MovieDescription } from 'entities/Movie';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Movie, MoviePosterResponse } from 'entities/Movie/model/types';
+import { MovieDetailCard } from 'entities/Movie/ui/MovieDetailCard/MovieDetailCard';
 interface PreviewProps {
   className?: string;
 }
@@ -24,7 +25,7 @@ export const Preview = ({ className }: PreviewProps) => {
       try {
         const response = await axios.get<Movie>(`${API_URL_DEV}/movie/${ATACK_ON_TITAN_ID}`, {
           headers: {
-            'X-API-KEY': 'G363QX4-0GVMAMN-MP9SW54-X711DGZ'
+            'X-API-KEY': 'MHMPMBA-E7CMG4F-J1CBPAS-ZSVK32F'
           }
         });
         setFilm(response.data);
@@ -69,6 +70,7 @@ export const Preview = ({ className }: PreviewProps) => {
         {film && <MovieDescription film={film} hasBtn={true} />}
       </div>
       <div className={styles.sub_poster__container}></div>
+      <MovieDetailCard film={film} />
     </section>
   );
 };

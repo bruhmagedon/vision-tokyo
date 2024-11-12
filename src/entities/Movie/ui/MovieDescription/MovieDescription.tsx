@@ -5,6 +5,7 @@ import { Movie } from 'entities/Movie/model/types';
 import { Button } from 'shared/ui/Button/Button';
 import { Play } from 'lucide-react';
 import { Badge, BadgeTheme } from 'shared/ui/Badge/Badge';
+import { getCaseByNumber } from 'shared/utils/getCaseByNumber/getCaseByNumber';
 
 interface MovieDescriptionProps {
   className?: string;
@@ -31,7 +32,7 @@ export const MovieDescription = ({ className, fullInfo, film, hasBtn }: MovieDes
           {film.type}
         </Badge>
         <Badge border theme={BadgeTheme.BRIGHT}>
-          {film.seasonsInfo.length - 1} сезонов
+          {getCaseByNumber(film.seasonsInfo.length - 1, 'ceзон')}
         </Badge>
       </ul>
       {fullInfo && <h2 className={styles.movie_desctiption__title}>Об истории</h2>}

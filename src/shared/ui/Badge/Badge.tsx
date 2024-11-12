@@ -1,4 +1,3 @@
-import { ButtonHTMLAttributes, FC } from 'react';
 import styles from './Badge.module.scss';
 import { classNames } from 'shared/utils/classNames/classNames';
 
@@ -30,5 +29,9 @@ export const Badge = (props: BadgeProps) => {
     [styles[size]]: true
   };
 
-  return <div className={classNames(styles.badge, mods, [className])}>{children}</div>;
+  return (
+    <div className={classNames(styles.badge, mods, [className])}>
+      <div className={styles.badge_child}>{children}</div>
+    </div>
+  );
 };
