@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
     "outDir": "./dist/",
-    "lib": ["es2017", "dom"],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     // Подсвечивает все места где не указан тип
     // Однако это не означает, что теперь вовсе нельзя использовать any.
     // Это означает лишь, что в подобных ситуация разработчик должен явно писать any,
@@ -16,28 +19,72 @@
     // Для абсолютного импорта
     "baseUrl": ".",
     "paths": {
-      "*": ["./src/*"],
-      "@app/*": ["src/app/*"],
-      "@pages/*": ["src/pages/*"],
-      "@shared/*": ["src/shared/*"],
-      "@widgets/*": ["src/widgets/*"],
-      "@/*": ["src/*"],
-      "@Header/*": ["src/widgets/Header/*"],
-      "@DirectionCard/*": ["src/widgets/DirectionCard/*"],
-      "app/*": ["src/app/*"],
-      "pages/*": ["src/pages/*"],
-      "shared/*": ["src/shared/*"],
-      "widgets/*": ["src/widgets/*"],
-      "/*": ["src/*"],
-      "fonts/*": ["src/app/fonts/*"],
-      "@Footer/*": ["src/widgets/Footer/*"],
-      "@features/*": ["src/features/*"],
-      "@Api/*": ["src/features/Api/*"],
-      "@Sceleton/*": ["src/widgets/Sceleton/*"],
-      "features/*": ["src/features/*"],
-      "DevicePage/*": ["src/pages/DevicePage/*"],
-      "ProfilePage/*": ["src/pages/ProfilePage/*"],
-      "@entities/*": ["src/entities/*"]
+      "*": [
+        "./src/*"
+      ],
+      "@app/*": [
+        "src/app/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@shared/*": [
+        "src/shared/*"
+      ],
+      "@widgets/*": [
+        "src/widgets/*"
+      ],
+      "@/*": [
+        "src/*"
+      ],
+      "@Header/*": [
+        "src/widgets/Header/*"
+      ],
+      "@DirectionCard/*": [
+        "src/widgets/DirectionCard/*"
+      ],
+      "app/*": [
+        "src/app/*"
+      ],
+      "pages/*": [
+        "src/pages/*"
+      ],
+      "shared/*": [
+        "src/shared/*"
+      ],
+      "widgets/*": [
+        "src/widgets/*"
+      ],
+      "/*": [
+        "src/*"
+      ],
+      "fonts/*": [
+        "src/app/fonts/*"
+      ],
+      "@Footer/*": [
+        "src/widgets/Footer/*"
+      ],
+      "@features/*": [
+        "src/features/*"
+      ],
+      "@Api/*": [
+        "src/features/Api/*"
+      ],
+      "@Sceleton/*": [
+        "src/widgets/Sceleton/*"
+      ],
+      "features/*": [
+        "src/features/*"
+      ],
+      "DevicePage/*": [
+        "src/pages/DevicePage/*"
+      ],
+      "ProfilePage/*": [
+        "src/pages/ProfilePage/*"
+      ],
+      "@entities/*": [
+        "src/entities/*"
+      ]
     },
     // esModuleInterop позволяет работать с пакетами, которые используют
     // common js как с обычными пакета с помощью import (require() module.export) = common js
@@ -53,6 +100,9 @@
     // import * as React from 'react';
     // можно писать такой
     // import React from 'react';
+    "allowSyntheticDefaultImports": true
+  }
+} 'react';
     "allowSyntheticDefaultImports": true
   }
 }

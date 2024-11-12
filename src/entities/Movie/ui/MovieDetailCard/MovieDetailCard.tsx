@@ -14,10 +14,10 @@ export const MovieDetailCard = ({ className, film }: MovieDetailCardProps) => {
     <div className={classNames(styles.movie_detail_card, {}, [className])}>
       <img
         className={styles.movie_detail_poster}
-        src={film.poster.previewUrl}
+        src={film?.poster?.previewUrl}
         alt='Постер фильма'
       />
-      <div className={styles.movie_detail_title}>{film.name}</div>
+      <div className={styles.movie_detail_title}>{film?.name}</div>
 
       <Button preffix={<Play />}>Смотреть</Button>
     </div>
