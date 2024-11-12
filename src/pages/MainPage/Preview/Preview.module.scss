@@ -1,16 +1,28 @@
 .preview {
   display: flex;
   column-gap: rem(30);
-  margin-top: rem(60);
+  margin-top: rem(30);
 }
 .main_poster {
-  width: 60%;
   position: relative;
 
   &__img {
-    width: 100%;
-    aspect-ratio: 2/1;
+    height: 100%;
+    aspect-ratio: 2 / 1;
     z-index: -1;
     border-radius: rem(12);
+  }
+  &__desc {
+    position: absolute;
+    bottom: rem(16);
+    left: rem(16);
+  }
+}
+.sub_poster {
+  &__container {
+    width: 35%;
+    display: flex;
+    row-gap: rem(30);
+    flex-direction: column;
   }
 }

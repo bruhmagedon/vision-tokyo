@@ -1,7 +1,7 @@
 import { classNames } from 'shared/utils/classNames/classNames';
 import styles from './MovieDescription.module.scss';
 import { TextGroup } from 'shared/ui/TextGroup/TextGroup';
-import { Movie } from 'entities/Movie/model/types';
+import { Film, Movie } from 'entities/Movie/model/types';
 import { Button } from 'shared/ui/Button/Button';
 import { Play } from 'lucide-react';
 import { Badge, BadgeTheme } from 'shared/ui/Badge/Badge';
@@ -10,17 +10,19 @@ import { getCaseByNumber } from 'shared/utils/getCaseByNumber/getCaseByNumber';
 interface MovieDescriptionProps {
   className?: string;
   fullInfo?: boolean;
-  film: Movie;
+  // film: Movie;
+  film: Film;
   hasBtn?: boolean;
 }
 
 export const MovieDescription = ({ className, fullInfo, film, hasBtn }: MovieDescriptionProps) => {
   return (
     <div className={classNames(styles.movie_description__container, {}, [className])}>
-      <h1 className={styles.movie_description__main_title}>{film.name}</h1>
+      {/* <h1 className={styles.movie_description__main_title}>{film.name}</h1> */}
+      <h1 className={styles.movie_description__main_title}>{film.nameRu}</h1>
       <ul className={styles.movie_description__list}>
         <Badge border theme={BadgeTheme.BRIGHT}>
-          {film.ageRating ?? '18'}+
+          {film.ratingAgeLimits ?? '18'}+{/* {film.ageRating ?? '18'}+ */}
         </Badge>
         <Badge border theme={BadgeTheme.BRIGHT}>
           HD
@@ -32,7 +34,8 @@ export const MovieDescription = ({ className, fullInfo, film, hasBtn }: MovieDes
           {film.type}
         </Badge>
         <Badge border theme={BadgeTheme.BRIGHT}>
-          {getCaseByNumber(film.seasonsInfo.length - 1, 'ceзон')}
+          {film.filmLength + ' серии'}
+          {/* {getCaseByNumber(film.seasonsInfo.length - 1, 'ceзон')} */}
         </Badge>
       </ul>
       {fullInfo && <h2 className={styles.movie_desctiption__title}>Об истории</h2>}
@@ -44,11 +47,16 @@ export const MovieDescription = ({ className, fullInfo, film, hasBtn }: MovieDes
         </p>
       )}
       <TextGroup
-        title='Сэйю'
-        textList={film.persons
+        //  title='Сэйю'
+        title='Жанры'
+        textList={film.genres
           .slice(0, 5)
-          .map((person) => person.name)
+          .map((genre) => genre.genre)
           .join(', ')}
+        // textList={film.persons
+        //   .slice(0, 5)
+        //   .map((person) => person.name)
+        //   .join(', ')}
       />
       {fullInfo && (
         <TextGroup

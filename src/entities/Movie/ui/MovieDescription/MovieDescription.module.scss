@@ -1,8 +1,5 @@
 .movie_description {
   &__container {
-    position: absolute;
-    bottom: rem(16);
-    left: rem(16);
     display: flex;
     flex-direction: column;
     justify-content: start;

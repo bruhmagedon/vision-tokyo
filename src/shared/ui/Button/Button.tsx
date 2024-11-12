@@ -4,7 +4,10 @@ import { classNames } from 'shared/utils/classNames/classNames';
 
 // Comming soon
 export enum ButtonTheme {}
-export enum ButtonSize {}
+export enum ButtonSize {
+  XS = 'size_xs',
+  M = 'size_m'
+}
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
@@ -18,13 +21,26 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = (props: ButtonProps) => {
-  const { className, children, disabled, preffix, suffix, ...otherProps } = props;
+  const {
+    className,
+    children,
+    disabled,
+    preffix,
+    suffix,
+    size = ButtonSize.M,
+    ...otherProps
+  } = props;
+
+  const mods: Record<string, boolean> = {
+    // [styles[theme]]: true,
+    [styles[size]]: true
+  };
 
   return (
     <button
       type='button'
       //   disabled={disabled}
-      className={classNames(styles.button, {}, [className])}
+      className={classNames(styles.button, mods, [className])}
       {...otherProps}
     >
       {preffix}
