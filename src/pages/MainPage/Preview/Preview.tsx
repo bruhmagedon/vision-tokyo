@@ -10,7 +10,7 @@ interface PreviewProps {
 }
 
 // Апи с плохими картинками
-const API_URL_DEV = 'https://api.kinopoisk.dev/v1.4';
+// const API_URL_DEV = 'https://api.kinopoisk.dev/v1.4';
 // Апи с хорошими картинками
 const API_URL_TECH = 'https://kinopoiskapiunofficial.tech/api/v2.2/films';
 
@@ -20,22 +20,22 @@ export const Preview = ({ className }: PreviewProps) => {
   const [film, setFilm] = useState<Movie>(null);
   const [filmPoster, setFilmPoster] = useState<MoviePosterResponse>(null);
 
-  useEffect(() => {
-    const fetchMovies = async () => {
-      try {
-        const response = await axios.get<Movie>(`${API_URL_DEV}/movie/${ATACK_ON_TITAN_ID}`, {
-          headers: {
-            'X-API-KEY': 'MHMPMBA-E7CMG4F-J1CBPAS-ZSVK32F'
-          }
-        });
-        setFilm(response.data);
-        return response.data;
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchMovies();
-  }, []);
+  // useEffect(() => {
+  //   const fetchMovies = async () => {
+  //     try {
+  //       const response = await axios.get<Movie>(`${API_URL_DEV}/movie/${ATACK_ON_TITAN_ID}`, {
+  //         headers: {
+  //           'X-API-KEY': 'MHMPMBA-E7CMG4F-J1CBPAS-ZSVK32F'
+  //         }
+  //       });
+  //       setFilm(response.data);
+  //       return response.data;
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   };
+  //   fetchMovies();
+  // }, []);
 
   useEffect(() => {
     const fetchFilmPoster = async () => {
@@ -67,10 +67,10 @@ export const Preview = ({ className }: PreviewProps) => {
             alt='Главный постер'
           />
         )}
-        {film && <MovieDescription film={film} hasBtn={true} />}
+        {/* {film && <MovieDescription film={film} hasBtn={true} />} */}
       </div>
       <div className={styles.sub_poster__container}></div>
-      <MovieDetailCard film={film} />
+      {/* <MovieDetailCard film={film} /> */}
     </section>
   );
 };
